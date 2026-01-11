@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LegalPocket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        :root {
+            --app-background: rgb(77, 26, 102);
+            --dashboard-background: rgb(46, 15, 64);
+            --deep-indigo: rgb(52, 31, 63);
+            --muted-plum: rgb(71, 45, 92);
+            --light-lavender: rgb(196, 168, 232);
+            --dashboard-purple: rgb(156, 39, 176);
+            --dashboard-pink: rgb(233, 30, 99);
+            --dashboard-orange: rgb(255, 152, 0);
+            --dashboard-green: rgb(76, 175, 80);
+            --dashboard-blue: rgb(33, 150, 243);
+            --dashboard-teal: rgb(0, 150, 136);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            background: linear-gradient(180deg, var(--app-background) 0%, var(--dashboard-background) 100%);
+            min-height: 100vh;
+        }
+
+        /* Lucide icon styling */
+        .lucide {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .lucide-sm {
+            width: 16px;
+            height: 16px;
+        }
+
+        .lucide-lg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .lucide-xl {
+            width: 32px;
+            height: 32px;
+        }
+
+        header {
+            background: rgb(36, 0, 70);
+            padding: 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            background: rgb(77, 26, 102);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+            color: white;
+        }
+
+        .logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .header-icon {
+            background: rgb(77, 26, 102);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header .icon {
+            color: var(--dashboard-purple);
+        }
+
+        .section-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(156, 39, 176, 0.15), rgba(233, 30, 99, 0.1));
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-card .note {
+            font-size: 0.8rem;
+            color: rgba(156, 39, 176, 0.9);
+            margin-top: 0.5rem;
+        }
+
+        .info-card .warning {
+            font-size: 0.8rem;
+            color: var(--dashboard-orange);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(0, 150, 136, 0.15));
+            border-left: 4px solid var(--dashboard-green);
+            border-radius: 0 12px 12px 0;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .highlight-box.security {
+            border: 1px solid rgba(76, 175, 80, 0.4);
+            border-left: 4px solid var(--dashboard-green);
+        }
+
+        .highlight-box.warning {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(255, 98, 71, 0.1));
+            border-left: 4px solid var(--dashboard-orange);
+        }
+
+        .data-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .data-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .data-card-indicator {
+            width: 4px;
+            height: 100%;
+            min-height: 40px;
+            border-radius: 2px;
+        }
+
+        .data-card-indicator.green { background: var(--dashboard-green); }
+        .data-card-indicator.blue { background: var(--dashboard-blue); }
+        .data-card-indicator.orange { background: var(--dashboard-orange); }
+        .data-card-indicator.gray { background: rgba(255, 255, 255, 0.4); }
+
+        .data-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .data-card .examples {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .data-card-details {
+            padding-left: 1rem;
+        }
+
+        .data-card-details .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .data-card-details .label.green { color: var(--dashboard-green); }
+        .data-card-details .label.blue { color: var(--dashboard-blue); }
+        .data-card-details .label.orange { color: var(--dashboard-orange); }
+
+        .data-card-details .value {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 0.75rem;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.green { background: var(--dashboard-green); }
+        .legend-dot.blue { background: var(--dashboard-blue); }
+        .legend-dot.orange { background: var(--dashboard-orange); }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .list-item .icon {
+            color: var(--dashboard-green);
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .list-item .icon.purple { color: var(--dashboard-purple); }
+        .list-item .icon.red { color: #ef5350; }
+
+        .list-item .text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .disclosure-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .disclosure-item .icon {
+            color: var(--dashboard-purple);
+            width: 24px;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .disclosure-item .icon.red { color: #ef5350; }
+
+        .disclosure-item h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .disclosure-item p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: rgba(156, 39, 176, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-email {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-email:hover {
+            color: var(--light-lavender);
+        }
+
+        footer {
+            background: rgb(77, 26, 102);
+            color: white;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-lavender);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .header-icon {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.1rem;
+            }
+
+            .legend {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .info-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="legalpocketlogo.png" alt="LegalPocket Logo" class="logo-image">
+            </div>
+            <div>
+                <div class="logo-text">LegalPocket</div>
+                <div class="tagline">The law, simplified. Your rights amplified.</div>
+            </div>
+        </div>
+        <div class="header-icon">
+            <i data-lucide="book-heart" class="lucide-xl"></i>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="page-header">
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">
+                <i data-lucide="calendar" class="lucide-sm"></i>
+                <span>Last Updated: January 10, 2026</span>
+          </div>
+
+<div class="privacy-policy-intro">
+    <p style="margin-bottom: 1.5rem;">
+        At <strong>LegalPocket</strong>, we prioritize the security and confidentiality of your data. This Privacy Policy details the types of information we collect, our storage protocols, and our access standards.
+    </p>
+    <p style="margin-bottom: 1.5rem;">
+        By accessing or using LegalPocket, you acknowledge that you have read, understood, and agree to be bound by both our Terms of Use and this Privacy Policy. Access to our services is strictly conditioned upon your acceptance of these terms.
+    </p>
+    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="margin-bottom: 0.75rem;">
+            <strong>Unified Agreement:</strong> This policy is an integral part of our Terms of Use, which you can find in the LegalPocket application under <strong>Profile > Privacy.</strong>Together, they govern the legal relationship between you and LegalPocket.
+        </li>
+        <li style="margin-bottom: 0.75rem;">
+            <strong>Notice of Updates:</strong> We may update this policy as our services evolve. Any material changes will be communicated via email or posted within the application.
+        </li>
+        <li style="margin-bottom: 0;">
+            <strong>Acceptance through Continued Use:</strong> Your continued use of LegalPocket after changes are posted constitutes your acceptance of the revised terms. This applies to all account holders, regardless of your notification settings.
+        </li>
+    </ul>
+</div>
+
+        <!-- Section 1: Overview -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="shield-check" class="icon lucide-lg"></i>
+                <h2>1. Overview & Security</h2>
+            </div>
+
+            <div class="info-card">
+                <h3>Zero-Knowledge for Sensitive Data</h3>
+                <p>LegalPocket uses a Zero-Knowledge approach for your most sensitive identity numbers (SIN, passport number, and UCI). These are stored exclusively in your iCloud Keychain with Apple's end-to-end encryption—not on our servers or any third party.</p>
+                <p>This means we cannot view, read, or share this sensitive data, even if we wanted to.</p>
+                <p>Other profile information (name, status, dates) is stored on Google Firebase, a secure cloud service. We do not sell or share your data for advertising purposes.</p>
+                <p class="note">We comply with Canada's Personal Information Protection and Electronic Documents Act (PIPEDA) and applicable provincial laws.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>iCloud Keychain Requirement</h3>
+                <p>To provide the highest level of security for sensitive identity numbers, LegalPocket uses Apple's iCloud Keychain for storage. This requires:</p>
+                
+                <div style="margin-top: 1rem;">
+                    <div class="list-item">
+                        <i data-lucide="check-circle-2" class="icon lucide-sm"></i>
+                        <span class="text">An Apple ID signed in on your device</span>
+                    </div>
+                    <div class="list-item">
+                        <i data-lucide="check-circle-2" class="icon lucide-sm"></i>
+                        <span class="text">iCloud Keychain enabled in your device settings</span>
+                    </div>
+                    <div class="list-item">
+                        <i data-lucide="check-circle-2" class="icon lucide-sm"></i>
+                        <span class="text">A device passcode or biometric (Face ID/Touch ID) set up</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: rgba(255,255,255,0.65);">Note: The passcode/biometric is an Apple requirement for iCloud Keychain to function—it's not a LegalPocket app lock.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Data Collection -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="table-2" class="icon lucide-lg"></i>
+                <h2>2. What Data We Collect & Where It's Stored</h2>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-dot green"></div>
+                    <span>Your device only (iCloud Keychain)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot blue"></div>
+                    <span>Google Firebase</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot orange"></div>
+                    <span>Firebase Storage</span>
+                </div>
+            </div>
+
+            <!-- Sensitive Identity Numbers -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator green"></div>
+                    <div>
+                        <h4>Sensitive Identity Numbers</h4>
+                        <div class="examples">SIN, Passport #, UCI, Expiry Dates</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label green">Purpose</div>
+                    <div class="value">Dashboard display; copy-paste convenience; expiry reminders</div>
+                    <div class="label green">Third Parties</div>
+                    <div class="value">Stored in Apple iCloud Keychain on your device. We cannot access this data.</div>
+                </div>
+            </div>
+
+            <!-- Personal Details -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator green"></div>
+                    <div>
+                        <h4>Personal Details</h4>
+                        <div class="examples">First/Last Name, Date of Birth</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label green">Purpose</div>
+                    <div class="value">Personalized dashboard; benefits eligibility calculation</div>
+                    <div class="label green">Third Parties</div>
+                    <div class="value">Stored in Apple iCloud Keychain on your device. We cannot access this data.</div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator blue"></div>
+                    <div>
+                        <h4>Contact Information</h4>
+                        <div class="examples">Email Address</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label blue">Purpose</div>
+                    <div class="value">Account login; password recovery</div>
+                    <div class="label blue">Third Parties</div>
+                    <div class="value">Stored on Google Firebase Authentication. Google can access this for authentication purposes.</div>
+                </div>
+            </div>
+
+            <!-- Location Information -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator blue"></div>
+                    <div>
+                        <h4>Location Information</h4>
+                        <div class="examples">Country of Citizenship, Province</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label blue">Purpose</div>
+                    <div class="value">Show relevant immigration pathways and provincial benefits</div>
+                    <div class="label blue">Third Parties</div>
+                    <div class="value">Stored on Google Firebase. We can access this data. Google stores it on their servers.</div>
+                </div>
+            </div>
+
+            <!-- Immigration Status -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator blue"></div>
+                    <div>
+                        <h4>Immigration Status</h4>
+                        <div class="examples">Current Status, Goals, Target Pathways</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label blue">Purpose</div>
+                    <div class="value">Generate relevant checklists and timeline milestones</div>
+                    <div class="label blue">Third Parties</div>
+                    <div class="value">Stored on Google Firebase. We can access this data. Google stores it on their servers.</div>
+                </div>
+            </div>
+
+            <!-- Uploaded Documents -->
+            <div class="data-card">
+                <div class="data-card-header">
+                    <div class="data-card-indicator orange"></div>
+                    <div>
+                        <h4>Uploaded Documents</h4>
+                        <div class="examples">PDFs, images of certificates</div>
+                    </div>
+                </div>
+                <div class="data-card-details">
+                    <div class="label orange">Purpose</div>
+                    <div class="value">Cloud storage so you can access your documents anywhere</div>
+                    <div class="label orange">Third Parties</div>
+                    <div class="value">Stored on Google Firebase Storage. We can access these files. Google stores them on their servers.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Who Can Access -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="users" class="icon lucide-lg"></i>
+                <h2>3. Who Can Access Your Data</h2>
+            </div>
+
+            <div class="info-card">
+                <div class="disclosure-item">
+                    <i data-lucide="user" class="icon lucide-sm"></i>
+                    <div>
+                        <h4>LegalPocket Team</h4>
+                        <p>We can access your Firebase data (immigration status, location, uploaded documents) for support purposes. We cannot access your iCloud Keychain data (SIN, passport, UCI).</p>
+                    </div>
+                </div>
+
+                <div class="disclosure-item">
+                    <i data-lucide="server" class="icon lucide-sm"></i>
+                    <div>
+                        <h4>Google (Firebase)</h4>
+                        <p>Google stores and processes your Firebase data on their servers. They are bound by their privacy policy and data processing agreements.</p>
+                    </div>
+                </div>
+
+                <div class="disclosure-item">
+                    <i data-lucide="apple" class="icon lucide-sm"></i>
+                    <div>
+                        <h4>Apple (iCloud Keychain)</h4>
+                        <p>Apple stores your sensitive data with end-to-end encryption. Neither Apple nor LegalPocket can read this data.</p>
+                    </div>
+                </div>
+
+                <div class="disclosure-item">
+                    <i data-lucide="landmark" class="icon lucide-sm"></i>
+                    <div>
+                        <h4>Law Enforcement</h4>
+                        <p>If required by law, we may disclose Firebase data. We cannot disclose iCloud Keychain data because we don't have access to it.</p>
+                    </div>
+                </div>
+
+                <div class="disclosure-item">
+                    <i data-lucide="building-2" class="icon lucide-sm"></i>
+                    <div>
+                        <h4>Business Transfers</h4>
+                        <p>If LegalPocket is sold or merged, your data may be transferred to the new owner.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box warning">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <i data-lucide="hand" class="lucide-sm" style="color: var(--dashboard-orange);"></i>
+                    <strong style="color: white;">We Do NOT:</strong>
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: rgba(255,255,255,0.85);">
+                    <li>• Sell your data to advertisers or data brokers</li>
+                    <li>• Share your data for marketing purposes</li>
+                    <li>• Use your data to show you targeted ads</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4: Deleting Your Data -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="trash-2" class="icon lucide-lg"></i>
+                <h2>4. Deleting Your Data</h2>
+            </div>
+
+            <div class="info-card">
+                <h3>You can delete your data at any time:</h3>
+                
+                <div style="margin-top: 1rem;">
+                    <div class="disclosure-item">
+                        <i data-lucide="user-minus" class="icon red lucide-sm"></i>
+                        <div>
+                            <h4>Delete Firebase Data</h4>
+                            <p>Profile → Manage Account → Delete Account. This removes your account and all data from Google Firebase.</p>
+                        </div>
+                    </div>
+
+                    <div class="disclosure-item">
+                        <i data-lucide="cloud-off" class="icon red lucide-sm"></i>
+                        <div>
+                            <h4>Delete iCloud Keychain Data</h4>
+                            <p>Your sensitive data (SIN, passport, UCI) is stored locally. Delete it through the app or uninstall the app to remove it from your device.</p>
+                        </div>
+                    </div>
+
+                    <div class="disclosure-item">
+                        <i data-lucide="mail" class="icon red lucide-sm"></i>
+                        <div>
+                            <h4>Request by Email</h4>
+                            <p>Email legalpockettoronto@gmail.com and we'll delete your Firebase data within 30 days.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="warning" style="margin-top: 1rem;">Note: Deleting your account is permanent. We cannot recover your data after deletion.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Children's Privacy -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="baby" class="icon lucide-lg"></i>
+                <h2>5. Children's Privacy</h2>
+            </div>
+
+            <div class="info-card">
+                <p>LegalPocket does not knowingly collect or solicit Personal Data from children under 13 years of age.</p>
+                <p>If we learn we have collected Personal Data from a child under 13, we will delete that information as quickly as possible.</p>
+                <p class="note">If you believe a child under 13 has provided Personal Data to us, please contact us at legalpockettoronto@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Security -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="shield" class="icon lucide-lg"></i>
+                <h2>6. Security Measures</h2>
+            </div>
+
+            <div class="highlight-box security">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <i data-lucide="shield-check" class="lucide-sm" style="color: var(--dashboard-green);"></i>
+                    <strong style="color: white;">How Your Data is Protected</strong>
+                </div>
+                
+                <div class="list-item">
+                    <i data-lucide="lock" class="icon lucide-sm"></i>
+                    <span class="text">Data sent between your device and Firebase is encrypted in transit (HTTPS/TLS)</span>
+                </div>
+                <div class="list-item">
+                    <i data-lucide="key" class="icon lucide-sm"></i>
+                    <span class="text">Sensitive data (SIN, passport, UCI) is stored in Apple iCloud Keychain with end-to-end encryption</span>
+                </div>
+                <div class="list-item">
+                    <i data-lucide="server" class="icon lucide-sm"></i>
+                    <span class="text">Firebase data is stored on Google's secure cloud infrastructure</span>
+                </div>
+                <div class="list-item">
+                    <i data-lucide="user-check" class="icon lucide-sm"></i>
+                    <span class="text">Sign in with Apple or email/password authentication via Firebase Auth</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                    <i data-lucide="alert-triangle" class="lucide-sm" style="color: var(--dashboard-orange);"></i>
+                    <strong style="color: white;">If There's a Security Breach</strong>
+                </div>
+                <p>If we discover a breach that could cause you significant harm, we will notify you and the Privacy Commissioner of Canada as required by PIPEDA (Canadian privacy law).</p>
+                <p class="warning" style="margin-top: 0.75rem;">Important: While we use industry-standard security practices, no system is 100% secure. We encourage you to use a strong, unique password.</p>
+            </div>
+        </div>
+
+        <!-- Section 7: Contact -->
+        <div class="section">
+            <div class="section-header">
+                <i data-lucide="mail" class="icon lucide-lg"></i>
+                <h2>7. Contact Us</h2>
+            </div>
+
+            <div class="info-card">
+                <h3>Questions or Concerns?</h3>
+                <p>If you have questions about this privacy policy, want to access your data, or have any concerns, please contact us:</p>
+                
+                <div class="contact-box">
+                    <a href="mailto:legalpockettoronto@gmail.com" class="contact-email">
+                        <i data-lucide="at-sign" class="lucide-sm"></i>
+                        <span>legalpockettoronto@gmail.com</span>
+                    </a>
+                </div>
+
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">We aim to respond to all inquiries within 7 business days.</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.5rem;">This policy may be updated from time to time. We will notify you of significant changes through the app.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 LegalPocket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
