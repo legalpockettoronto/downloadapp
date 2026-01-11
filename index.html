@@ -19,7 +19,6 @@
             --dashboard-blue: rgb(33, 150, 243);
             --light-lavender: rgb(196, 168, 232);
             --muted-plum: rgb(71, 45, 92);
-            --header-height: 80px;
         }
 
         /* Enable Snap Scrolling */
@@ -67,30 +66,6 @@
             right: -10%;
             background: var(--dashboard-pink);
         }
-
-        header {
-            background: rgba(46, 15, 64, 0.8);
-            backdrop-filter: blur(20px);
-            padding: 0 1.5rem;
-            height: var(--header-height);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .header-content {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .logo { display: flex; align-items: center; gap: 1rem; }
         .logo-text { font-size: 1.6rem; font-weight: 800; color: white; letter-spacing: -0.5px; }
 
@@ -241,15 +216,6 @@
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <span class="logo-text">LegalPocket</span>
-            </div>
-            <a href="#download" class="btn btn-primary">Download Now</a>
-        </div>
-    </header>
 
     <section class="hero">
         <h1>
