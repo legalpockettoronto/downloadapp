@@ -1,4 +1,577 @@
-<section class="hero">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalPocket - The Law, Simplified. Your Rights, Amplified.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        :root {
+            --app-background: rgb(77, 26, 102);
+            --dashboard-background: rgb(46, 15, 64);
+            --primary-purple: rgb(156, 39, 176);
+            --dashboard-pink: rgb(181, 49, 139);
+            --dashboard-orange: rgb(255, 152, 0);
+            --dashboard-green: rgb(76, 175, 80);
+            --dashboard-blue: rgb(33, 150, 243);
+            --light-lavender: rgb(196, 168, 232);
+            --muted-plum: rgb(71, 45, 92);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background: linear-gradient(180deg, var(--app-background) 0%, var(--dashboard-background) 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .lucide {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .lucide-sm {
+            width: 18px;
+            height: 18px;
+        }
+
+        .lucide-md {
+            width: 24px;
+            height: 24px;
+        }
+
+        .lucide-lg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .lucide-xl {
+            width: 48px;
+            height: 48px;
+        }
+
+        header {
+            background: rgba(46, 15, 64, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dashboard-pink));
+            box-shadow: 0 8px 24px rgba(156, 39, 176, 0.5);
+            overflow: hidden;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--dashboard-pink), #F06292);
+            color: white;
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(233, 30, 99, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 .white-text {
+            color: white;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--light-lavender) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn {
+            font-size: 1.1rem;
+            padding: 1.125rem 2.5rem;
+        }
+
+.phone-showcase {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.phone-mockup {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 45px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    border: 8px solid rgba(255, 255, 255, 0.1);
+}
+
+        .section-full {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .section-full.pink-bg {
+            background: linear-gradient(180deg, var(--dashboard-pink) 0%, #AD1457 100%);
+        }
+
+        .section-full.purple-bg {
+            background: linear-gradient(180deg, var(--primary-purple) 0%, var(--muted-plum) 100%);
+        }
+
+        .section-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .section-content.reverse {
+            direction: rtl;
+        }
+
+        .section-content.reverse > * {
+            direction: ltr;
+        }
+
+        .section-text h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .section-text .white-text {
+            color: white;
+        }
+
+        .section-text .light-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .section-text p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 45px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            border: 8px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .centered-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .centered-section h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .centered-section p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        .section-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+        }
+
+        .feature-circles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .circle-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circle-icon {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .circle-icon img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .circle-item h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .circle-item p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--dashboard-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .cta-final {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dashboard-pink) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            margin: 4rem 0 0 0;
+        }
+
+        .cta-final h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+        }
+
+        .cta-final p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-final .btn {
+            background: white;
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+            padding: 1.25rem 3rem;
+            font-weight: 700;
+        }
+
+        .cta-final .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .disclaimer {
+            background: rgba(46, 15, 64, 0.8);
+            backdrop-filter: blur(10px);
+            border-left: 5px solid var(--dashboard-orange);
+            padding: 2.5rem;
+            margin: 3rem auto;
+            max-width: 1200px;
+            border-radius: 0 16px 16px 0;
+        }
+
+        .disclaimer h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.25rem;
+        }
+
+        .disclaimer p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: rgba(46, 15, 64, 0.95);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-text h2 {
+                font-size: 2.8rem;
+            }
+
+            .centered-section h2 {
+                font-size: 2.8rem;
+            }
+
+            .section-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .section-content.reverse {
+                direction: ltr;
+            }
+
+            .feature-circles {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-cta {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-text h2 {
+                font-size: 2.2rem;
+            }
+
+            .centered-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-final h2 {
+                font-size: 2.5rem;
+            }
+
+            .section-full {
+                padding: 4rem 1.5rem;
+            }
+
+            .centered-section {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
         <h1>
             <span class="white-text">The Law,</span> <span class="gradient-text">Simplified.</span><br>
             <span class="white-text">Your Rights,</span> <span class="gradient-text">Amplified.</span>
@@ -10,18 +583,150 @@
   Imagine being able to understand, access, and use the law to your advantage! 
   When you know the rules, you can play with confidence and stand up for what's just.
 </p>
-        <div class="hero-cta">
-            <a href="#download" class="btn btn-primary">
-                <i data-lucide="download" class="lucide-md"></i>
-                Download Now
-            </a>
-            <a href="#features" class="btn btn-secondary">
-                <i data-lucide="sparkles" class="lucide-md"></i>
-                Explore Features
-            </a>
+        
+    </section>
+
+ <section class="centered-section">
+    <img src="bottle.png" alt="Documents" class="section-icon">
+    <h2><span class="white-text">Stay Ahead of</span><br><span class="light-text">Every Expiry Date</span></h2>
+    <p>Never miss a deadline again. Track passport expiry, work permits, study permits, and other important documents with timely reminders.</p>
+    
+    <div class="phone-showcase">
+        <img src="progresstracker.png" alt="Passport Expiry Tracker" class="phone-mockup">
+    </div>
+</section>
+
+<section class="section-full purple-bg">
+    <div class="section-content reverse">
+        <div class="section-text">
+            <h2><span class="white-text">Navigate</span><br><span class="light-text">Immigration with Confidence</span></h2>
+            <p>Love straightforward info, checklists, and easy steps? So do we! Explore our guides to simplify what you need to know about immigration processes including Express Entry, Study Permits, Work Permits, and more.</p>
         </div>
+        <div class="section-image">
+            <img src="https://placehold.co/380x800/4D1A66/FFFFFF?text=Immigration+Guides" alt="Immigration Guides">
+        </div>
+    </div>
+</section>
+
+    <section class="centered-section">
+        <img src="pinkgem.png" alt="Immigration" class="section-icon">
+        <h2><span class="white-text">Follow Express Entry Draws &</span><br><span class="light-text">Calculate Your CRS Score</span></h2>
+        <p>Stay updated with the latest Express Entry draws and calculate your Comprehensive Ranking System (CRS) score to see your chances of receiving an Invitation to Apply (ITA).</p>
         
         <div class="phone-showcase">
-            <img src="SC 7.png" alt="It's Life App" class="phone-mockup" style="max-width: 320px;">
+            <img src="https://placehold.co/380x800/4D1A66/FFFFFF?text=Express+Entry+Draws" alt="Express Entry Draws">
         </div>
     </section>
+
+    <section class="section-full pink-bg">
+        <div class="section-content">
+            <div class="section-text">
+                <img src="pinkgem.png" alt="Immigration" class="section-icon">
+                <h2><span class="white-text">Track Your</span> <span class="light-text">Journey</span></h2>
+                <p>Monitor key steps in your immigration journey and easily check how much time has passed to plan your next moves. Visualize your timeline with milestones and upcoming deadlines.</p>
+            </div>
+            <div class="section-image">
+                <img src="https://placehold.co/380x800/4D1A66/FFFFFF?text=Timeline+Tracker" alt="Timeline Tracker">
+            </div>
+        </div>
+    </section>
+
+    <section class="centered-section">
+        <img src="compass.png" alt="Know Your Rights" class="section-icon">
+        <h2><span class="white-text">Know Your</span> <span class="light-text">Rights.</span><br><span class="white-text">Take Action.</span></h2>
+        <p>We all have rights based on the roles we play in life. We'll help you understand what you're entitled to and guide you on how to take action when these rights aren't respected. Explore rights for employees, tenants, parents, consumers, taxpayers, and more.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="briefcase" class="lucide-lg"></i>
+                </div>
+                <h3>Employee Rights</h3>
+                <p>Pay standards, leave, and workplace safety. Understand your entitlements regarding wages, hours, and safety.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="house" class="lucide-lg"></i>
+                </div>
+                <h3>Tenant Rights</h3>
+                <p>Navigate rent increases, repairs, and eviction rules. Know your rights as a tenant in Ontario.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="heart" class="lucide-lg"></i>
+                </div>
+                <h3>Parent Rights</h3>
+                <p>Maternity leave, child benefits, and daycare rights. Access the support you're entitled to.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="tag" class="lucide-lg"></i>
+                </div>
+                <h3>Consumer Rights</h3>
+                <p>Protection against unfair billing, scams, and refunds. Know what you're entitled to as a consumer.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="building" class="lucide-lg"></i>
+                </div>
+                <h3>Taxpayer Rights</h3>
+                <p>Maximize your refunds and claim eligible tax credits. Access government assistance programs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <i data-lucide="leaf" class="lucide-lg"></i>
+                </div>
+                <h3>Entrepreneur Rights</h3>
+                <p>Intellectual property, contracts, and small business tax. Navigate business formation and commercial disputes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-full purple-bg">
+        <div class="section-content reverse">
+            <div class="section-text">
+                <img src="waves.png" alt="Life's Unexpected Moments" class="section-icon">
+                <h2><span class="white-text">Instant Guidance for</span><br><span class="light-text">Life's Unexpected Moments</span></h2>
+                <p>Some situations catch you off guard. It's Life is here for the moments no one plans for. Get instant guidance for car incidents, housing concerns, consumer protection, and essential services when settling in Canada.</p>
+            </div>
+            <div class="section-image">
+                <img src="https://placehold.co/380x800/4D1A66/FFFFFF?text=It's+Life+Feature" alt="It's Life Feature">
+            </div>
+        </div>
+    </section>
+
+    <div class="disclaimer">
+        <h3>
+            <i data-lucide="alert-triangle" class="lucide-lg"></i>
+            Legal Disclaimer
+        </h3>
+        <p>LegalPocket provides legal information for educational and informational purposes only. The content does not constitute legal advice, legal representation, or create a solicitor-client relationship. We are not licensed lawyers, paralegals, or Regulated Canadian Immigration Consultants (RCIC).</p>
+        <p>You are solely responsible for verifying all information with official government sources (such as the IRCC website) before taking any action. LegalPocket is not a professional deadline monitoring service, and we are not responsible for any missed deadlines, expired permits, or loss of legal status resulting from reliance on app data.</p>
+        <p style="margin-bottom: 0;"><strong>For complex legal matters or immigration applications, please consult a licensed legal professional or Regulated Canadian Immigration Consultant.</strong></p>
+    </div>
+
+    <section class="cta-final" id="download">
+        <h2>Because justice shouldn't be a mystery!</h2>
+        <p>Download LegalPocket today and navigate Ontario law with confidence.</p>
+        <a href="#" class="btn">
+          <img src="legalpocketlogo.png" alt="LegalPocket Logo" class="logo-icon">
+            Download Now
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 LegalPocket. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="mailto:legalpockettoronto@gmail.com">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
