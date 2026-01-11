@@ -21,7 +21,6 @@
             --muted-plum: rgb(71, 45, 92);
         }
 
-        /* Enable Snap Scrolling */
         html {
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
@@ -42,7 +41,6 @@
             position: relative;
         }
 
-        /* Glow Blobs Background */
         body::before, body::after {
             content: "";
             position: fixed;
@@ -113,7 +111,7 @@
         }
 
         .section-content {
-            max-width: 1100px; /* Reduced max-width to bring everything closer */
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -126,7 +124,7 @@
         .section-content.reverse > * { direction: ltr; }
 
         .section-text {
-            max-width: 600px; /* Ensure text block stays contained */
+            max-width: 600px;
         }
 
         .section-text h2 {
