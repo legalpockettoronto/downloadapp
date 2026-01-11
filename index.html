@@ -219,10 +219,14 @@
     border: 8px solid rgba(255, 255, 255, 0.1);
 }
 
-        .section-full {
-            padding: 6rem 2rem;
-            position: relative;
-        }
+       .section-full {
+    min-height: 100vh;    
+    padding: 2rem;    
+    display: flex;      
+    align-items: center;  
+    position: relative;
+    box-sizing: border-box;
+}
 
         .section-full.pink-bg {
             background: linear-gradient(180deg, var(--dashboard-pink) 0%, #AD1457 100%);
