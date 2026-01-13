@@ -81,7 +81,7 @@
         }
 
         /* Logo Styling */
-      .hero-logo {
+        .hero-logo {
             width: 500px;
             height: auto;
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
@@ -233,17 +233,17 @@
             }
             .hero h1 { font-size: 3rem; }
             .section-text h2 { font-size: 2.5rem; }
-            .hero-logo { width: 100px; }
+            .hero-logo { width: 300px; }
         }
     </style>
 </head>
 <body>
 
-    <section class="logo-section">
-        <img src="legalpocketlogo.png" alt="LegalPocket Logo" class="hero-logo">
+    <section class="logo-section" id="logoSection">
+        <img src="legalpocketlogo.png" alt="LegalPocket Logo" class="hero-logo" id="treasureLogo">
     </section>
 
-    <section class="hero">
+    <section class="hero" id="heroSection">
         <h1>
             <span class="white-text">The Law,</span> <span class="gradient-text">Simplified.</span><br>
             <span class="white-text">Your Rights,</span> <span class="gradient-text">Amplified.</span>
@@ -303,6 +303,32 @@
             <a href="mailto:legalpockettoronto@gmail.com">Contact Us</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const treasureLogo = document.getElementById('treasureLogo');
+            const heroSection = document.getElementById('heroSection');
+
+            if (treasureLogo && heroSection) {
+                function handleInteraction(e) {
+                    e.preventDefault();
+                    
+                    treasureLogo.classList.add('animate-open');
+                    
+                    setTimeout(() => {
+                        treasureLogo.classList.remove('animate-open');
+                    }, 1200);
+                    
+                    setTimeout(() => {
+                        heroSection.scrollIntoView({ behavior: 'smooth' });
+                    }, 600);
+                }
+
+                treasureLogo.addEventListener('click', handleInteraction);
+                treasureLogo.addEventListener('touchstart', handleInteraction);
+            }
+        });
+    </script>
 
 </body>
 </html>
