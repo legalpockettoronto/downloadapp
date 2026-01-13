@@ -308,24 +308,39 @@
         document.addEventListener('DOMContentLoaded', function() {
             const treasureLogo = document.getElementById('treasureLogo');
             const heroSection = document.getElementById('heroSection');
+            const htmlElement = document.documentElement;
 
             if (treasureLogo && heroSection) {
                 function handleInteraction(e) {
                     e.preventDefault();
+                    e.stopPropagation();
                     
+                    // Add animation class
                     treasureLogo.classList.add('animate-open');
                     
+                    // Remove animation class after it completes
                     setTimeout(() => {
                         treasureLogo.classList.remove('animate-open');
                     }, 1200);
                     
+                    // Scroll to hero section with scroll-snap disabled temporarily
                     setTimeout(() => {
-                        heroSection.scrollIntoView({ behavior: 'smooth' });
+                        // Disable scroll-snap temporarily
+                        htmlElement.style.scrollSnapType = 'none';
+                        
+                        // Scroll to the section
+                        heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        
+                        // Re-enable scroll-snap after scrolling completes
+                        setTimeout(() => {
+                            htmlElement.style.scrollSnapType = 'y mandatory';
+                        }, 1000);
                     }, 600);
                 }
 
+                // Use touchend instead of touchstart to avoid conflicts
                 treasureLogo.addEventListener('click', handleInteraction);
-                treasureLogo.addEventListener('touchstart', handleInteraction);
+                treasureLogo.addEventListener('touchend', handleInteraction, { passive: false });
             }
         });
     </script>
