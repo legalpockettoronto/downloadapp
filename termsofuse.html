@@ -1,1 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - LegalPocket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        :root {
+            --app-background: rgb(77, 26, 102);
+            --dashboard-background: rgb(46, 15, 64);
+            --deep-indigo: rgb(52, 31, 63);
+            --muted-plum: rgb(71, 45, 92);
+            --light-lavender: rgb(196, 168, 232);
+            --dashboard-purple: rgb(156, 39, 176);
+            --dashboard-pink: rgb(233, 30, 99);
+            --dashboard-orange: rgb(255, 152, 0);
+            --dashboard-green: rgb(76, 175, 80);
+            --dashboard-blue: rgb(33, 150, 243);
+            --dashboard-teal: rgb(0, 150, 136);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            background: linear-gradient(180deg, var(--app-background) 0%, var(--dashboard-background) 100%);
+            min-height: 100vh;
+        }
+
+        .lucide {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .lucide-sm {
+            width: 16px;
+            height: 16px;
+        }
+
+        .lucide-lg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .lucide-xl {
+            width: 32px;
+            height: 32px;
+        }
+
+        header {
+            background: rgb(36, 0, 70);
+            padding: 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            background: rgb(77, 26, 102);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.4);
+            color: white;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .header-icon {
+            background: rgb(77, 26, 102);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-list {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-list li {
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header .icon {
+            color: var(--dashboard-purple);
+        }
+
+        .section-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, rgba(156, 39, 176, 0.15), rgba(233, 30, 99, 0.1));
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(95, 58, 163, 1), rgba(42, 11, 87, 0.8));
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .highlight-box.warning {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.4), rgba(255, 98, 71, 0.3));
+            border: 1px solid rgba(255, 152, 0, 0.5);
+        }
+
+        .highlight-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-box p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 0 0;
+        }
+
+        .highlight-box ul li {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.85);
+            padding: 0.25rem 0;
+        }
+
+        .terms-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-item .icon {
+            color: var(--dashboard-purple);
+            width: 24px;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .terms-item h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .terms-item p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            color: var(--dashboard-purple);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .restriction-box {
+            background: linear-gradient(135deg, rgba(244, 67, 54, 0.4), rgba(255, 152, 0, 0.3));
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(244, 67, 54, 0.5);
+        }
+
+        .restriction-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .disclaimer-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .disclaimer-box h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .disclaimer-box p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: rgba(156, 39, 176, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-email {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-email:hover {
+            color: var(--light-lavender);
+        }
+
+        footer {
+            background: rgb(77, 26, 102);
+            color: white;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-lavender);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .header-icon {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.1rem;
+            }
+
+            .info-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <img src="legalpocketlogo.png" alt="LegalPocket Logo" class="logo-image">
+            </div>
+            <div>
+                <div class="logo-text">LegalPocket</div>
+                <div class="tagline">The law, simplified. Your rights amplified.</div>
+            </div>
+        </a>
+        <div class="header-icon">
+            <i data-lucide="sparkles" class="lucide-xl"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <h1>Terms of Use</h1>
+        <div class="last-updated">
+            <i data-lucide="calendar" class="lucide-sm"></i>
+            <span>Last Updated: January 10, 2026</span>
+        </div>
+
+        <p class="intro-text">
+            Welcome to <strong>LegalPocket</strong>. By accessing or using our application, you agree to comply with and be bound by these Terms of Use.
+        </p>
+        <p class="intro-text">
+            By accessing or using LegalPocket, you acknowledge that you have read, understood, and agree to be bound by both our Privacy Policy and these Terms of Use. Access to our services is strictly conditioned upon your acceptance of these terms.
+        </p>
+        <ul class="intro-list">
+            <li>
+                <strong>Unified Agreement:</strong> These terms are an integral part of our Privacy Policy, which you can find in the LegalPocket application under <strong>Profile > Privacy</strong>. Together, they govern the legal relationship between you and LegalPocket.
+            </li>
+            <li>
+                <strong>Notice of Updates:</strong> We may update these terms as our services evolve. Any material changes will be communicated via email or posted within the application.
+            </li>
+            <li>
+                <strong>Acceptance through Continued Use:</strong> Your continued use of LegalPocket after changes are posted constitutes your acceptance of the revised terms. This applies to all account holders, regardless of your notification settings.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section 1: About -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="info" class="icon lucide-lg"></i>
+            <h2>1. About LegalPocket</h2>
+        </div>
+
+        <div class="info-card">
+            <p>LegalPocket is a digital tool designed to help newcomers and residents in Canada organize personal legal information, track immigration milestones, and access general educational content about Canadian law and government benefits. We provide informational resources, not professional legal services.</p>
+        </div>
+    </div>
+
+    <!-- Section 2: No Legal Advice -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="alert-triangle" class="icon lucide-lg"></i>
+            <h2>2. No Solicitor-Client Relationship</h2>
+        </div>
+
+        <div class="highlight-box">
+            <h4>
+                <i data-lucide="alert-circle" class="lucide-sm"></i>
+                IMPORTANT
+            </h4>
+            <p><strong>LegalPocket is a self-help tool, not a law firm or legal services provider.</strong></p>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="user-x" class="icon lucide-sm"></i>
+                <div>
+                    <h4>We Are Not Licensed Legal Professionals</h4>
+                    <p>No one at LegalPocket is acting as your lawyer, paralegal, or Regulated Canadian Immigration Consultant (RCIC). We do not provide legal advice, representation, or immigration consulting services.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="file-x" class="icon lucide-sm"></i>
+                <div>
+                    <h4>No Legal Advice Given</h4>
+                    <p>The content in this app (checklists, timelines, explanations, and educational materials) is general information only. It does not constitute legal advice tailored to your specific situation.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="users-x" class="icon lucide-sm"></i>
+                <div>
+                    <h4>No Solicitor-Client Relationship</h4>
+                    <p>Using LegalPocket does not create a solicitor-client relationship, attorney-client privilege, or any confidential legal relationship. Any information you share is not protected by legal privilege.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="map-pin" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Jurisdiction-Specific Advice Required</h4>
+                    <p>Canadian immigration and legal matters can vary significantly by province, territory, and individual circumstances. Always consult a licensed legal professional for advice specific to your situation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Eligibility -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="user-check" class="icon lucide-lg"></i>
+            <h2>3. Eligibility and Account Registration</h2>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="calendar-check" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Age Requirement</h4>
+                    <p>You must be at least 18 years old to use LegalPocket. By creating an account, you represent that you meet this age requirement.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="edit" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Registration Accuracy</h4>
+                    <p>You agree to provide accurate, current, and complete information during registration and to update it as needed to keep it accurate.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="lock" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Account Security</h4>
+                    <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. Notify us immediately of any unauthorized use.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="user-minus" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Right to Terminate Accounts</h4>
+                    <p>We reserve the right to suspend or terminate your account if we believe you have violated these Terms or engaged in fraudulent or harmful conduct.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Premium Subscriptions -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="crown" class="icon lucide-lg"></i>
+            <h2>4. Premium Subscriptions and Payments</h2>
+        </div>
+
+        <div class="highlight-box">
+            <h4>
+                <i data-lucide="star" class="lucide-sm"></i>
+                Premium Features
+            </h4>
+            <p>LegalPocket offers premium subscription options that provide access to enhanced features, such as advanced checklists, personalized timelines, and additional educational content.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="credit-card" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Payment and Billing</h4>
+                    <p>All payments for premium subscriptions are processed through Apple's In-App Purchase system or other authorized payment processors. You agree to pay all applicable fees and taxes.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="refresh-cw" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Subscription Auto-Renewal</h4>
+                    <p>Premium subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date. You will be charged the then-current subscription fee.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="settings" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Managing Your Subscription</h4>
+                    <p>You can cancel or modify your subscription at any time through your device's App Store settings. Cancellations take effect at the end of the current billing period.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="rotate-ccw" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Refund Policy</h4>
+                    <p>All sales are final. Refund requests must be submitted through Apple's App Store in accordance with Apple's refund policies. LegalPocket does not process refunds directly.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="trending-up" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Price Changes</h4>
+                    <p>We reserve the right to change subscription prices at any time. You will be notified of price changes in advance, and the new price will apply to your next billing cycle unless you cancel.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="apple" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Apple's Licensed Application End User License Agreement (EULA)</h4>
+                    <p>If you download LegalPocket from the Apple App Store, you acknowledge and agree that these Terms incorporate Apple's standard EULA for licensed applications. In the event of any conflict between these Terms and Apple's EULA, Apple's EULA shall prevail.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: Updates and Accuracy -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="refresh-ccw" class="icon lucide-lg"></i>
+            <h2>5. Updates and Content Accuracy</h2>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="file-clock" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Evolving Content</h4>
+                    <p>Canadian immigration laws, government policies, and benefit programs change regularly. While we strive to keep our content current and accurate, we do not guarantee that all information is up-to-date.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="user-check" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Your Responsibility to Verify</h4>
+                    <p>It is your responsibility to verify any information with official sources (such as Immigration, Refugees and Citizenship Canada) or a licensed professional before making important decisions.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="calendar-x" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Timelines Are Estimates</h4>
+                    <p>Processing times and deadlines provided in the app are approximate and based on publicly available information. Actual timelines may vary significantly depending on individual circumstances and government policies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 6: User Content -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="upload" class="icon lucide-lg"></i>
+            <h2>6. User Content and Document Storage</h2>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="check-circle" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Ownership</h4>
+                    <p>You retain all rights to any documents, files, or information you upload to LegalPocket. We do not claim ownership of your content.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="shield-check" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Security and Storage</h4>
+                    <p>Your uploaded documents are stored securely in Google Firebase Storage. We implement industry-standard security practices, but no system is entirely risk-free. Review our Privacy Policy for more details.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="alert-triangle" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Backup Responsibility</h4>
+                    <p>You are responsible for maintaining your own backups of any documents or information you upload to LegalPocket. We are not liable for any data loss.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 7: Third-Party Links -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="link" class="icon lucide-lg"></i>
+            <h2>7. Third-Party Links and Resources</h2>
+        </div>
+
+        <div class="info-card">
+            <p>LegalPocket may contain links to third-party websites, resources, or services for educational purposes. We do not endorse, control, or assume responsibility for any third-party content. Your use of third-party websites is at your own risk and subject to their terms and privacy policies.</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: rgba(156, 39, 176, 0.9);">
+                Note: We may provide links to official government sources, but these links are for convenience only and do not imply endorsement by those entities.
+            </p>
+
+            <h3 style="margin-top: 1.5rem;">Disclaimer Regarding IRCC and Government Websites</h3>
+            <p>LegalPocket may provide links or references to Immigration, Refugees and Citizenship Canada (IRCC) and other government websites for informational purposes only. LegalPocket is not affiliated with, endorsed by, or sponsored by IRCC, the Government of Canada, or any provincial or territorial government. Any references to government programs, policies, or services are provided solely for educational purposes and do not constitute an official endorsement or partnership.</p>
+        </div>
+    </div>
+
+    <!-- Section 8: Intellectual Property -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="copyright" class="icon lucide-lg"></i>
+            <h2>8. Intellectual Property Rights</h2>
+        </div>
+
+        <div class="info-card">
+            <h4><strong>Our Rights</strong></h4>
+            <p>All content in LegalPocket, including but not limited to text, graphics, logos, icons, images, software, and data compilations, is the property of LegalPocket or its licensors and is protected by Canadian and international copyright, trademark, and other intellectual property laws.</p>
+
+            <h4 style="margin-top: 1.5rem;"><strong>Your License</strong></h4>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to access and use LegalPocket for personal, non-commercial purposes, subject to these Terms. You may not copy, modify, distribute, sell, or exploit any part of the app without our express written permission.</p>
+        </div>
+    </div>
+
+    <!-- Section 9: Restrictions -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="ban" class="icon lucide-lg"></i>
+            <h2>9. Prohibited Conduct</h2>
+        </div>
+
+        <div class="restriction-box">
+            <h4>
+                <i data-lucide="alert-octagon" class="lucide-sm"></i>
+                You Agree NOT To
+            </h4>
+            <ul class="bullet-list">
+                <li>Use LegalPocket for any unlawful purpose or in violation of these Terms.</li>
+                <li>Infringe on our intellectual property rights or those of others.</li>
+                <li>Scrape, crawl, or harvest data from the app using automated means.</li>
+                <li>Use LegalPocket's content to train artificial intelligence or machine learning models without our prior written consent.</li>
+                <li>Reverse engineer, decompile, or disassemble any part of the app.</li>
+                <li>Disrupt, interfere with, or harm the app's functionality, servers, or networks.</li>
+                <li>Gain unauthorized access to any part of the app, other users' accounts, or our systems.</li>
+                <li>Impersonate any person or entity or falsely state or misrepresent your affiliation with any person or entity.</li>
+                <li>Upload viruses, malware, or any code designed to harm or disrupt the app.</li>
+                <li>Share your account credentials with others or allow unauthorized access to your account.</li>
