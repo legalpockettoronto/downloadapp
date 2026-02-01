@@ -160,17 +160,28 @@
             margin-bottom: 1.5rem;
         }
 
-        .intro-list {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
+        .contact-intro {
+            background: rgba(156, 39, 176, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        .intro-list li {
-            margin-bottom: 0.75rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .contact-email {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-email:hover {
+            color: var(--light-lavender);
         }
 
         .section {
@@ -366,20 +377,6 @@
             gap: 0.75rem;
         }
 
-        .contact-email {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-email:hover {
-            color: var(--light-lavender);
-        }
-
         footer {
             background: rgb(77, 26, 102);
             color: white;
@@ -469,22 +466,27 @@
         </div>
 
         <p class="intro-text">
-            Welcome to <strong>LegalPocket</strong>. By accessing or using our application, you agree to comply with and be bound by these Terms of Use.
+            Welcome to LegalPocket. Please read the following terms and conditions (the "Terms of Use") that govern the relationship between you and Nathalia Serrano, doing business as Legal Pocket, and your use of our products, services, and applications (the "Services"). If you have any questions, comments, or concerns regarding these Terms of Use, please contact us at:
         </p>
-        <p class="intro-text">
-            By accessing or using LegalPocket, you acknowledge that you have read, understood, and agree to be bound by both our Privacy Policy and these Terms of Use. Access to our services is strictly conditioned upon your acceptance of these terms.
-        </p>
-        <ul class="intro-list">
-            <li>
-                <strong>Unified Agreement:</strong> These terms are an integral part of our Privacy Policy, which you can find in the LegalPocket application under <strong>Profile > Privacy</strong>. Together, they govern the legal relationship between you and LegalPocket.
-            </li>
-            <li>
-                <strong>Notice of Updates:</strong> We may update these terms as our services evolve. Any material changes will be communicated via email or posted within the application.
-            </li>
-            <li>
-                <strong>Acceptance through Continued Use:</strong> Your continued use of LegalPocket after changes are posted constitutes your acceptance of the revised terms. This applies to all account holders, regardless of your notification settings.
-            </li>
-        </ul>
+        
+        <div class="contact-intro">
+            <i data-lucide="mail" class="lucide-sm" style="color: var(--dashboard-purple);"></i>
+            <a href="mailto:legalpockettoronto@gmail.com" class="contact-email">
+                <span>legalpockettoronto@gmail.com</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Acceptance of Terms -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="check-circle" class="icon lucide-lg"></i>
+            <h2>Acceptance of Terms</h2>
+        </div>
+
+        <div class="info-card">
+            <p>By accessing or using LegalPocket, you acknowledge that you have read, understood, and agree to be bound by both our Privacy Policy and these Terms of Use. The LegalPocket App is licensed, not sold, to you; access to our Services is strictly conditioned upon your acceptance of these terms.</p>
+        </div>
     </div>
 
     <!-- Section 1: About -->
@@ -506,19 +508,18 @@
             <h2>2. No Solicitor-Client Relationship</h2>
         </div>
 
-        <div class="highlight-box">
+        <div class="highlight-box warning">
             <h4>
                 <i data-lucide="alert-circle" class="lucide-sm"></i>
-                IMPORTANT
+                IMPORTANT: LegalPocket is a self-help tool, not a law firm or legal services provider.
             </h4>
-            <p><strong>LegalPocket is a self-help tool, not a law firm or legal services provider.</strong></p>
         </div>
 
         <div class="info-card">
             <div class="terms-item">
                 <i data-lucide="user-x" class="icon lucide-sm"></i>
                 <div>
-                    <h4>We Are Not Licensed Legal Professionals</h4>
+                    <h4>No Licensed Legal Professionals</h4>
                     <p>No one at LegalPocket is acting as your lawyer, paralegal, or Regulated Canadian Immigration Consultant (RCIC). We do not provide legal advice, representation, or immigration consulting services.</p>
                 </div>
             </div>
@@ -527,14 +528,14 @@
                 <i data-lucide="file-x" class="icon lucide-sm"></i>
                 <div>
                     <h4>No Legal Advice Given</h4>
-                    <p>The content in this app (checklists, timelines, explanations, and educational materials) is general information only. It does not constitute legal advice tailored to your specific situation.</p>
+                    <p>The content in this App (checklists, timelines, explanations, and educational materials) is for general information only. It does not constitute legal advice tailored to your specific situation.</p>
                 </div>
             </div>
 
             <div class="terms-item">
                 <i data-lucide="users-x" class="icon lucide-sm"></i>
                 <div>
-                    <h4>No Solicitor-Client Relationship</h4>
+                    <h4>No Professional Relationship</h4>
                     <p>Using LegalPocket does not create a solicitor-client relationship, attorney-client privilege, or any confidential legal relationship. Any information you share is not protected by legal privilege.</p>
                 </div>
             </div>
@@ -543,9 +544,21 @@
                 <i data-lucide="map-pin" class="icon lucide-sm"></i>
                 <div>
                     <h4>Jurisdiction-Specific Advice Required</h4>
-                    <p>Canadian immigration and legal matters can vary significantly by province, territory, and individual circumstances. Always consult a licensed legal professional for advice specific to your situation.</p>
+                    <p>Canadian immigration and legal matters vary significantly by province, territory, and individual circumstances. Always consult a licensed legal professional for advice specific to your situation.</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Notice of Updates -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="bell-ring" class="icon lucide-lg"></i>
+            <h2>3. Notice of Updates</h2>
+        </div>
+
+        <div class="info-card">
+            <p>We may update these Terms of Use as our Services evolve. Any material changes will be communicated within the App. Your continued use of the App after changes are posted constitutes your acceptance of the revised terms. This applies to all account holders, regardless of your notification settings.</p>
         </div>
     </div>
 
@@ -553,7 +566,7 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="user-check" class="icon lucide-lg"></i>
-            <h2>3. Eligibility and Account Registration</h2>
+            <h2>4. Eligibility and Account Registration</h2>
         </div>
 
         <div class="info-card">
@@ -584,7 +597,7 @@
             <div class="terms-item">
                 <i data-lucide="user-minus" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Right to Terminate Accounts</h4>
+                    <h4>Right to Terminate</h4>
                     <p>We reserve the right to suspend or terminate your account if we believe you have violated these Terms or engaged in fraudulent or harmful conduct.</p>
                 </div>
             </div>
@@ -595,7 +608,7 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="crown" class="icon lucide-lg"></i>
-            <h2>4. Premium Subscriptions and Payments</h2>
+            <h2>5. Premium Subscriptions and Payments</h2>
         </div>
 
         <div class="highlight-box">
@@ -603,7 +616,7 @@
                 <i data-lucide="star" class="lucide-sm"></i>
                 Premium Features
             </h4>
-            <p>LegalPocket offers premium subscription options that provide access to enhanced features, such as advanced checklists, personalized timelines, and additional educational content.</p>
+            <p>LegalPocket offers premium subscription options that provide access to enhanced features, such as a personalized dashboard.</p>
         </div>
 
         <div class="info-card">
@@ -611,7 +624,7 @@
                 <i data-lucide="credit-card" class="icon lucide-sm"></i>
                 <div>
                     <h4>Payment and Billing</h4>
-                    <p>All payments for premium subscriptions are processed through Apple's In-App Purchase system or other authorized payment processors. You agree to pay all applicable fees and taxes.</p>
+                    <p>All payments are processed through Apple's In-App Purchase system or other authorized processors. You agree to pay all applicable fees and taxes.</p>
                 </div>
             </div>
 
@@ -619,7 +632,7 @@
                 <i data-lucide="refresh-cw" class="icon lucide-sm"></i>
                 <div>
                     <h4>Subscription Auto-Renewal</h4>
-                    <p>Premium subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date. You will be charged the then-current subscription fee.</p>
+                    <p>Subscriptions automatically renew unless cancelled before the renewal date. You will be charged the then-current fee at the start of each billing period.</p>
                 </div>
             </div>
 
@@ -627,7 +640,7 @@
                 <i data-lucide="settings" class="icon lucide-sm"></i>
                 <div>
                     <h4>Managing Your Subscription</h4>
-                    <p>You can cancel or modify your subscription at any time through your device's App Store settings. Cancellations take effect at the end of the current billing period.</p>
+                    <p>You can cancel or modify your subscription via your device's App Store settings. Cancellations take effect at the end of the current billing period.</p>
                 </div>
             </div>
 
@@ -635,7 +648,7 @@
                 <i data-lucide="rotate-ccw" class="icon lucide-sm"></i>
                 <div>
                     <h4>Refund Policy</h4>
-                    <p>All sales are final. Refund requests must be submitted through Apple's App Store in accordance with Apple's refund policies. LegalPocket does not process refunds directly.</p>
+                    <p>All sales are final. Refund requests must be submitted through the Apple App Store in accordance with Apple's refund policies. LegalPocket does not process refunds directly.</p>
                 </div>
             </div>
 
@@ -643,15 +656,7 @@
                 <i data-lucide="trending-up" class="icon lucide-sm"></i>
                 <div>
                     <h4>Price Changes</h4>
-                    <p>We reserve the right to change subscription prices at any time. You will be notified of price changes in advance, and the new price will apply to your next billing cycle unless you cancel.</p>
-                </div>
-            </div>
-
-            <div class="terms-item">
-                <i data-lucide="apple" class="icon lucide-sm"></i>
-                <div>
-                    <h4>Apple's Licensed Application End User License Agreement (EULA)</h4>
-                    <p>If you download LegalPocket from the Apple App Store, you acknowledge and agree that these Terms incorporate Apple's standard EULA for licensed applications. In the event of any conflict between these Terms and Apple's EULA, Apple's EULA shall prevail.</p>
+                    <p>We reserve the right to change prices at any time. You will be notified in advance, and new prices will apply to the next billing cycle unless you cancel.</p>
                 </div>
             </div>
         </div>
@@ -661,31 +666,31 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="refresh-ccw" class="icon lucide-lg"></i>
-            <h2>5. Updates and Content Accuracy</h2>
+            <h2>6. Updates and Content Accuracy</h2>
         </div>
 
         <div class="info-card">
             <div class="terms-item">
                 <i data-lucide="file-clock" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Evolving Content</h4>
-                    <p>Canadian immigration laws, government policies, and benefit programs change regularly. While we strive to keep our content current and accurate, we do not guarantee that all information is up-to-date.</p>
+                    <h4>Nature of Evolving Content</h4>
+                    <p>Canadian immigration laws, government policies, and benefit programs are subject to frequent and sudden change. While we endeavor to maintain the currency and accuracy of our resources, LegalPocket does not warrant or guarantee that all information provided is current, complete, or error-free at any given time.</p>
                 </div>
             </div>
 
             <div class="terms-item">
                 <i data-lucide="user-check" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Your Responsibility to Verify</h4>
-                    <p>It is your responsibility to verify any information with official sources (such as Immigration, Refugees and Citizenship Canada) or a licensed professional before making important decisions.</p>
+                    <h4>User Responsibility to Verify</h4>
+                    <p>You acknowledge that the App is a starting point for information only. It is your sole responsibility to verify all information against official sources—such as Immigration, Refugees and Citizenship Canada (IRCC)—or with a licensed legal professional before taking any action or making decisions that may affect your legal status or benefits.</p>
                 </div>
             </div>
 
             <div class="terms-item">
                 <i data-lucide="calendar-x" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Timelines Are Estimates</h4>
-                    <p>Processing times and deadlines provided in the app are approximate and based on publicly available information. Actual timelines may vary significantly depending on individual circumstances and government policies.</p>
+                    <h4>Estimates and Timelines</h4>
+                    <p>Any processing times, countdowns, or deadlines provided within the App are non-binding estimates based on generalized public data. Actual timelines are determined exclusively by government authorities and may vary significantly based on your specific profile, changes in policy, or administrative delays.</p>
                 </div>
             </div>
         </div>
@@ -695,31 +700,31 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="upload" class="icon lucide-lg"></i>
-            <h2>6. User Content and Document Storage</h2>
+            <h2>7. User Content and Document Storage</h2>
         </div>
 
         <div class="info-card">
             <div class="terms-item">
                 <i data-lucide="check-circle" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Ownership</h4>
-                    <p>You retain all rights to any documents, files, or information you upload to LegalPocket. We do not claim ownership of your content.</p>
+                    <h4>Ownership and Rights</h4>
+                    <p>You retain full ownership and all intellectual property rights to any documents, files, or information you upload to LegalPocket (collectively, "User Content"). LegalPocket does not claim any ownership interest in your User Content.</p>
                 </div>
             </div>
 
             <div class="terms-item">
                 <i data-lucide="shield-check" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Security and Storage</h4>
-                    <p>Your uploaded documents are stored securely in Google Firebase Storage. We implement industry-standard security practices, but no system is entirely risk-free. Review our Privacy Policy for more details.</p>
+                    <h4>Storage and Infrastructure</h4>
+                    <p>Your User Content is hosted using Google Firebase Storage. While we utilize industry-standard administrative, technical, and physical security measures to protect your data, you acknowledge that no method of electronic storage or transmission over the internet is 100% secure. For more information on how we handle your data, please refer to our Privacy Policy.</p>
                 </div>
             </div>
 
             <div class="terms-item">
                 <i data-lucide="alert-triangle" class="icon lucide-sm"></i>
                 <div>
-                    <h4>Backup Responsibility</h4>
-                    <p>You are responsible for maintaining your own backups of any documents or information you upload to LegalPocket. We are not liable for any data loss.</p>
+                    <h4>Assumption of Risk and Backup Responsibility</h4>
+                    <p>LegalPocket provides document organization as a convenience only. You are solely responsible for maintaining independent, permanent backups of all User Content uploaded to the App. To the maximum extent permitted by law, LegalPocket is not liable for any data loss, corruption, or unauthorized access to your documents, regardless of the cause.</p>
                 </div>
             </div>
         </div>
@@ -729,17 +734,15 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="link" class="icon lucide-lg"></i>
-            <h2>7. Third-Party Links and Resources</h2>
+            <h2>8. Third-Party Links and Official Government Resources</h2>
         </div>
 
         <div class="info-card">
-            <p>LegalPocket may contain links to third-party websites, resources, or services for educational purposes. We do not endorse, control, or assume responsibility for any third-party content. Your use of third-party websites is at your own risk and subject to their terms and privacy policies.</p>
-            <p style="margin-top: 1rem; font-size: 0.8rem; color: rgba(156, 39, 176, 0.9);">
-                Note: We may provide links to official government sources, but these links are for convenience only and do not imply endorsement by those entities.
-            </p>
+            <h4>Third-Party Content</h4>
+            <p>LegalPocket may provide links to third-party websites, resources, or services for educational convenience. We do not control, endorse, or assume any responsibility for the content, accuracy, or practices of these third parties. Your interaction with any third-party resource is strictly at your own risk and subject to that provider's terms and privacy policies.</p>
 
-            <h4>Disclaimer Regarding IRCC and Government Websites</h4>
-            <p>LegalPocket may provide links or references to Immigration, Refugees and Citizenship Canada (IRCC) and other government websites for informational purposes only. LegalPocket is not affiliated with, endorsed by, or sponsored by IRCC, the Government of Canada, or any provincial or territorial government. Any references to government programs, policies, or services are provided solely for educational purposes and do not constitute an official endorsement or partnership.</p>
+            <h4>Government Affiliation Disclaimer</h4>
+            <p>LegalPocket frequently references official sources, including Immigration, Refugees and Citizenship Canada (IRCC) and other provincial or federal government websites. You acknowledge and agree that LegalPocket is a private entity and is not affiliated with, endorsed by, sponsored by, or an official partner of IRCC, the Government of Canada, or any provincial or territorial government. References to government programs or policies are provided for informational purposes only and do not constitute an official government communication.</p>
         </div>
     </div>
 
@@ -747,15 +750,18 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="copyright" class="icon lucide-lg"></i>
-            <h2>8. Intellectual Property Rights</h2>
+            <h2>9. Intellectual Property Rights</h2>
         </div>
 
         <div class="info-card">
-            <h4>Our Rights</h4>
-            <p>All content in LegalPocket, including but not limited to text, graphics, logos, icons, images, software, and data compilations, is the property of LegalPocket or its licensors and is protected by Canadian and international copyright, trademark, and other intellectual property laws.</p>
+            <h4>Proprietary Rights</h4>
+            <p>All original content within LegalPocket—including but not limited to text, graphics, logos, UI/UX design, icons, images, software code, and data compilations—is the exclusive property of LegalPocket or its licensors. This content is protected by Canadian and international copyright, trademark, and other intellectual property laws.</p>
 
-            <h4>Your License</h4>
-            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to access and use LegalPocket for personal, non-commercial purposes, subject to these Terms. You may not copy, modify, distribute, sell, or exploit any part of the app without our express written permission.</p>
+            <h4>Limited User License</h4>
+            <p>We grant you a limited, non-exclusive, non-transferable, and revocable license to access and use the App for personal, non-commercial purposes in accordance with these Terms. This license does not permit you to copy, modify, distribute, sell, lease, or exploit any portion of the App or its content without our prior express written consent. All rights not expressly granted to you are reserved by LegalPocket.</p>
+
+            <h4>Submission of Feedback</h4>
+            <p>Any suggestions, feedback, or ideas you provide to us regarding the App shall become the sole property of LegalPocket. We may use such feedback for any purpose without obligation or compensation to you.</p>
         </div>
     </div>
 
@@ -763,25 +769,24 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="ban" class="icon lucide-lg"></i>
-            <h2>9. Prohibited Conduct</h2>
+            <h2>10. Prohibited Conduct</h2>
         </div>
 
         <div class="restriction-box">
             <h4>
                 <i data-lucide="alert-octagon" class="lucide-sm"></i>
-                You Agree NOT To
+                By using LegalPocket, you expressly agree NOT to:
             </h4>
             <ul class="bullet-list">
-                <li>Use LegalPocket for any unlawful purpose or in violation of these Terms.</li>
-                <li>Infringe on our intellectual property rights or those of others.</li>
-                <li>Scrape, crawl, or harvest data from the app using automated means.</li>
-                <li>Use LegalPocket's content to train artificial intelligence or machine learning models without our prior written consent.</li>
-                <li>Reverse engineer, decompile, or disassemble any part of the app.</li>
-                <li>Disrupt, interfere with, or harm the app's functionality, servers, or networks.</li>
-                <li>Gain unauthorized access to any part of the app, other users' accounts, or our systems.</li>
-                <li>Impersonate any person or entity or falsely state or misrepresent your affiliation with any person or entity.</li>
-                <li>Upload viruses, malware, or any code designed to harm or disrupt the app.</li>
-                <li>Share your account credentials with others or allow unauthorized access to your account.</li>
+                <li><strong>Unlawful Use:</strong> Use the App for any illegal purposes or in a manner that violates any local, provincial, federal, or international law or regulation.</li>
+                <li><strong>Intellectual Property Infringement:</strong> Reproduce, redistribute, or infringe upon the intellectual property rights of LegalPocket or any third party associated with our Services.</li>
+                <li><strong>Automated Data Collection:</strong> Use any robot, spider, crawler, scraper, or other automated means or interface to access the App or extract data ("data mining") without our express written permission.</li>
+                <li><strong>AI and Machine Learning:</strong> Use any content, data, or output from LegalPocket to train, develop, or improve artificial intelligence (AI), large language models (LLMs), or machine learning models without our prior, specific written consent.</li>
+                <li><strong>Reverse Engineering:</strong> Attempt to reverse engineer, decompile, disassemble, or otherwise discover the source code of any portion of the App.</li>
+                <li><strong>System Interference:</strong> Engage in any activity that disrupts, degrades, interferes with, or burdens the App's functionality, servers, or underlying networks, including "denial of service" attacks.</li>
+                <li><strong>Unauthorized Access:</strong> Attempt to gain unauthorized access to any portion of the App, other users' accounts, or our internal systems through hacking, password mining, or any other illegitimate means.</li>
+                <li><strong>Malicious Content:</strong> Upload, transmit, or distribute viruses, malware, trojan horses, or any other code designed to harm, disrupt, or limit the functionality of the App or our users' devices.</li>
+                <li><strong>Misrepresentation:</strong> Impersonate any person or entity, or falsely state or otherwise misrepresent your affiliation with a person or entity, including misleading others about your relationship with the Government of Canada or IRCC.</li>
             </ul>
         </div>
     </div>
@@ -790,11 +795,15 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="shield" class="icon lucide-lg"></i>
-            <h2>10. Privacy</h2>
+            <h2>11. Privacy and Data Protection</h2>
         </div>
 
         <div class="info-card">
-            <p>Your use of LegalPocket is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information. By using LegalPocket, you consent to the practices described in our Privacy Policy.</p>
+            <h4>Incorporation of Privacy Policy</h4>
+            <p>Your privacy is important to us. Your use of LegalPocket is subject to our Privacy Policy, which is incorporated into these Terms by reference. Our Privacy Policy explains how we collect, process, and protect your personal information and sensitive documents.</p>
+
+            <h4>Consent</h4>
+            <p>By accessing or using the App, you acknowledge that you have read and understood our Privacy Policy and consent to the collection and use of your data as described therein.</p>
         </div>
     </div>
 
@@ -802,11 +811,33 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="bell" class="icon lucide-lg"></i>
-            <h2>11. Notifications and Reminders</h2>
+            <h2>12. Notifications, Alerts, and Reminders</h2>
         </div>
 
         <div class="info-card">
-            <p>LegalPocket may send you notifications and reminders related to your account, deadlines, and milestones. You can manage notification preferences in your device settings. We are not responsible if you miss important deadlines due to disabled notifications.</p>
+            <div class="terms-item">
+                <i data-lucide="bell-ring" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Service Notifications</h4>
+                    <p>LegalPocket may send you push notifications, alerts, and reminders related to your account, upcoming deadlines, and immigration milestones. These are provided as a convenience only.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="settings" class="icon lucide-sm"></i>
+                <div>
+                    <h4>User Responsibility for Settings</h4>
+                    <p>You may manage or disable these notifications at any time through your device settings. You acknowledge that disabling notifications may prevent you from receiving time-sensitive updates.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="alert-triangle" class="icon lucide-sm"></i>
+                <div>
+                    <h4>No Guarantee of Delivery</h4>
+                    <p>You agree that LegalPocket is not responsible or liable for any missed deadlines, lost opportunities, or legal consequences resulting from: (i) Notifications being disabled on your device; (ii) Technical failures, network latency, or delivery issues beyond our control; or (iii) Your failure to manually verify critical dates against official government sources.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -814,23 +845,26 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="alert-octagon" class="icon lucide-lg"></i>
-            <h2>12. Technical Issues and Disclaimer of Warranties</h2>
+            <h2>13. Technical Issues and Disclaimer of Warranties</h2>
         </div>
 
         <div class="disclaimer-box">
-            <h4>Provided "AS IS"</h4>
-            <p>LegalPocket is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+            <h4>Provision "As Is" and "As Available"</h4>
+            <p>LegalPocket is provided to you on an "as is" and "as available" basis. To the maximum extent permitted by applicable law, we disclaim all warranties, whether express, implied, statutory, or otherwise, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement.</p>
         </div>
 
         <div class="info-card">
-            <p>We do not warrant that:</p>
+            <h4>No Guarantee of Performance</h4>
+            <p>LegalPocket makes no representations or warranties that:</p>
             <ul class="bullet-list">
-                <li>The app will be uninterrupted, timely, secure, or error-free.</li>
-                <li>The results obtained from using the app will be accurate or reliable.</li>
-                <li>Any errors in the app will be corrected.</li>
-                <li>The app or servers are free of viruses or other harmful components.</li>
+                <li>The App will meet your specific requirements or expectations;</li>
+                <li>The App will be uninterrupted, timely, secure, or free from functional or programming errors;</li>
+                <li>The information or results obtained from the use of the App will be accurate, complete, or reliable; or</li>
+                <li>Any defects or technical errors in the App will be corrected.</li>
             </ul>
-            <p style="margin-top: 1rem;">You acknowledge that your use of LegalPocket is at your sole risk.</p>
+
+            <h4 style="margin-top: 1.5rem;">Risk of Use</h4>
+            <p>Any material downloaded or otherwise obtained through the use of the App is accessed at your own discretion and risk. You are solely responsible for any damage to your device or loss of data that results from such activities. We do not warrant that the App, its servers, or emails sent from us are free of viruses, malware, or other harmful components.</p>
         </div>
     </div>
 
@@ -838,20 +872,16 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="shield-alert" class="icon lucide-lg"></i>
-            <h2>13. Limitation of Liability</h2>
+            <h2>14. Limitation of Liability</h2>
         </div>
 
         <div class="disclaimer-box">
-            <h4>Maximum Liability</h4>
-            <p>To the fullest extent permitted by law, LegalPocket, its officers, directors, employees, and agents shall not be liable for any:</p>
+            <h4>LIMITATION OF LIABILITY</h4>
+            <p>TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL LEGALPOCKET, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS (THE "LICENSOR PARTIES") BE LIABLE FOR PERSONAL INJURY OR ANY INCIDENTAL, SPECIAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, OR OTHERWISE) AND EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
         </div>
 
         <div class="info-card">
-            <ul class="bullet-list">
-                <li>Indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of LegalPocket.</li>
-                <li>Damages for loss of profits, revenue, data, use, goodwill, or other intangible losses.</li>
-                <li>In any event, our total liability shall not exceed the amount you paid to LegalPocket in the twelve (12) months preceding the claim, or $100 CAD, whichever is greater.</li>
-            </ul>
+            <p>SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO YOU. IN NO EVENT SHALL LICENSOR'S TOTAL LIABILITY TO YOU FOR ALL DAMAGES (OTHER THAN AS MAY BE REQUIRED BY APPLICABLE LAW IN CASES INVOLVING PERSONAL INJURY) EXCEED THE AMOUNT OF FIFTY DOLLARS ($50.00 CAD). THE FOREGOING LIMITATIONS WILL APPLY EVEN IF THE ABOVE STATED REMEDY FAILS OF ITS ESSENTIAL PURPOSE.</p>
         </div>
     </div>
 
@@ -859,16 +889,54 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="shield-check" class="icon lucide-lg"></i>
-            <h2>14. Indemnification</h2>
+            <h2>15. Indemnification</h2>
         </div>
 
         <div class="info-card">
-            <p>You agree to indemnify, defend, and hold harmless LegalPocket and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with:</p>
+            <p>You agree to indemnify, defend, and hold harmless LegalPocket, its founder Nathalia Serrano, and its officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, judgments, awards, costs, and expenses (including reasonable legal and accounting fees) arising out of or in any way connected with:</p>
             <ul class="bullet-list">
-                <li>Your use or misuse of LegalPocket.</li>
-                <li>Your violation of these Terms.</li>
-                <li>Your violation of any third-party rights, including intellectual property rights or privacy rights.</li>
+                <li>Your access to, use of, or misuse of the App and Services;</li>
+                <li>Your breach or alleged violation of these Terms of Use;</li>
+                <li>Your violation of any third-party rights, including but not limited to any intellectual property, proprietary, or privacy rights; or</li>
+                <li>Any harmful or unlawful content you upload or distribute through the App.</li>
             </ul>
+            <p style="margin-top: 1rem;">This defense and indemnification obligation will survive these Terms of Use and your use of the Services.</p>
+        </div>
+    </div>
+
+    <!-- Apple App Store Terms -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="apple" class="icon lucide-lg"></i>
+            <h2>16. Apple App Store Supplemental Terms</h2>
+        </div>
+
+        <div class="info-card">
+            <p>If you have downloaded our application (the "App") via the Apple App Store, the following terms also apply:</p>
+
+            <h4>Acknowledgement</h4>
+            <p>You acknowledge that these Terms of Use are concluded between you and Legal Pocket only, and not with Apple, Inc. ("Apple"). Legal Pocket, not Apple, is solely responsible for the App and its content.</p>
+
+            <h4>Scope of License</h4>
+            <p>The license granted to you for the App is limited to a non-transferable license to use the App on any Apple-branded products that you own or control, and as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions.</p>
+
+            <h4>Maintenance and Support</h4>
+            <p>Legal Pocket is solely responsible for providing any maintenance and support services with respect to the App. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App.</p>
+
+            <h4>Warranty</h4>
+            <p>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.</p>
+
+            <h4>Product Claims</h4>
+            <p>You acknowledge that Legal Pocket, not Apple, is responsible for addressing any claims related to the App or your possession and use of it, including but not limited to: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation.</p>
+
+            <h4>Intellectual Property Rights</h4>
+            <p>You acknowledge that, in the event of any third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, Legal Pocket, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such infringement claim.</p>
+
+            <h4>Legal Compliance</h4>
+            <p>You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</p>
+
+            <h4>Third-Party Beneficiary</h4>
+            <p>You acknowledge and agree that Apple, and Apple's subsidiaries, are third-party beneficiaries of these Terms of Use, and that, upon your acceptance of these terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms of Use against you as a third-party beneficiary thereof.</p>
         </div>
     </div>
 
@@ -876,16 +944,33 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="file-edit" class="icon lucide-lg"></i>
-            <h2>15. Modifications to Terms</h2>
+            <h2>17. Modifications to Terms</h2>
         </div>
 
         <div class="info-card">
-            <p>We reserve the right to modify these Terms at any time. When we make changes, we will:</p>
-            <ul class="bullet-list">
-                <li>Update the "Last Updated" date at the top of this page.</li>
-                <li>Notify you via email or in-app notification if the changes are material.</li>
-            </ul>
-            <p style="margin-top: 1rem;">Your continued use of LegalPocket after any changes indicates your acceptance of the new Terms. If you do not agree to the modified Terms, you must stop using the app.</p>
+            <div class="terms-item">
+                <i data-lucide="edit-3" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Right to Amend</h4>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time to reflect changes in our Services, evolving laws, or technical requirements.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="bell-ring" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Notification of Material Changes</h4>
+                    <p>If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. Notification will be provided via email or a prominent in-app notification. What constitutes a "material change" will be determined at our sole discretion.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="check-square" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Acceptance Through Continued Use</h4>
+                    <p>By continuing to access or use LegalPocket after those revisions become effective, you agree to be bound by the revised Terms. If you do not agree to the new Terms, in whole or in part, you must immediately discontinue use of the App and cancel any active subscriptions.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -893,11 +978,33 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="power" class="icon lucide-lg"></i>
-            <h2>16. Termination</h2>
+            <h2>18. Termination</h2>
         </div>
 
         <div class="info-card">
-            <p>We may suspend or terminate your access to LegalPocket at any time, with or without cause or notice, if we believe you have violated these Terms or engaged in conduct harmful to LegalPocket or other users. Upon termination, your right to use the app will immediately cease.</p>
+            <div class="terms-item">
+                <i data-lucide="user-x" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Termination by LegalPocket</h4>
+                    <p>We reserve the right to suspend or terminate your account and access to the App immediately, without prior notice or liability, for any reason whatsoever, including but not limited to a breach of these Terms, fraudulent activity, or conduct harmful to the App's community or reputation.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="alert-circle" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Effect of Termination</h4>
+                    <p>Upon termination, your right to use the App will cease immediately. Any provisions of these Terms which by their nature should survive termination shall survive, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="database" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Data Loss</h4>
+                    <p>You acknowledge that termination of your account may result in the permanent deletion of your User Content. LegalPocket is not responsible for any data loss resulting from the termination of your access.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -905,7 +1012,7 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="scale" class="icon lucide-lg"></i>
-            <h2>17. Governing Law and Dispute Resolution</h2>
+            <h2>19. Governing Law and Dispute Resolution</h2>
         </div>
 
         <div class="info-card">
@@ -913,7 +1020,7 @@
                 <i data-lucide="landmark" class="icon lucide-sm"></i>
                 <div>
                     <h4>Governing Law</h4>
-                    <p>These Terms shall be governed by and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to conflict of law principles.</p>
+                    <p>These Terms and your use of the App shall be governed by, and construed in accordance with, the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to its conflict of law principles.</p>
                 </div>
             </div>
 
@@ -921,7 +1028,65 @@
                 <i data-lucide="message-square" class="icon lucide-sm"></i>
                 <div>
                     <h4>Informal Resolution</h4>
-                    <p>Before initiating any formal dispute resolution, you agree to first contact us at legalpockettoronto@gmail.com to attempt to resolve the issue informally.</p>
+                    <p>Before initiating any formal legal proceeding, you agree to attempt to resolve any dispute, claim, or controversy informally by contacting us at legalpockettoronto@gmail.com. You agree to engage in good-faith negotiations for a period of at least thirty (30) days before seeking formal relief.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="map-pin" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Forum and Jurisdiction</h4>
+                    <p>Any legal action, suit, or proceeding arising out of or relating to these Terms that cannot be resolved informally shall be instituted exclusively in the courts of the Province of Ontario (located in the City of Toronto). You and LegalPocket both irrevocably consent to the exclusive personal jurisdiction and venue of such courts.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="users" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Class Action Waiver</h4>
+                    <p>To the fullest extent permitted by law, all claims must be brought in the parties' individual capacity, and not as a plaintiff or class member in any purported class, collective, or representative proceeding.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="clock" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Time Limitation on Claims</h4>
+                    <p>To the maximum extent permitted by applicable law, any cause of action arising out of or related to the Services must commence within one (1) year after the cause of action accrues. In jurisdictions where such a limitation is prohibited by law, the applicable statutory limitation period shall apply.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- General Provisions -->
+    <div class="section">
+        <div class="section-header">
+            <i data-lucide="file-text" class="icon lucide-lg"></i>
+            <h2>20. General Provisions</h2>
+        </div>
+
+        <div class="info-card">
+            <div class="terms-item">
+                <i data-lucide="divide" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Severability</h4>
+                    <p>If any provision of these Terms is held to be unenforceable or invalid by a court of competent jurisdiction, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="file-check" class="icon lucide-sm"></i>
+                <div>
+                    <h4>Entire Agreement</h4>
+                    <p>These Terms, together with the Privacy Policy, constitute the entire agreement between you and LegalPocket regarding the Services and supersede all prior or contemporaneous communications, representations, or understandings, whether electronic, oral, or written.</p>
+                </div>
+            </div>
+
+            <div class="terms-item">
+                <i data-lucide="x-circle" class="icon lucide-sm"></i>
+                <div>
+                    <h4>No Waiver</h4>
+                    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
                 </div>
             </div>
         </div>
@@ -931,12 +1096,11 @@
     <div class="section">
         <div class="section-header">
             <i data-lucide="mail" class="icon lucide-lg"></i>
-            <h2>18. Contact Information</h2>
+            <h2>21. Contact Information and Feedback</h2>
         </div>
 
         <div class="info-card">
-            <h3>Questions or Concerns?</h3>
-            <p>If you have questions about these Terms of Use, need assistance, or have any concerns, please contact us:</p>
+            <p>If you have any questions, concerns, or requests for technical assistance regarding these Terms of Use or the Services, please contact us at:</p>
             
             <div class="contact-box">
                 <i data-lucide="mail" class="lucide-sm" style="color: var(--dashboard-purple);"></i>
@@ -945,10 +1109,11 @@
                 </a>
             </div>
 
-            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">We aim to respond to all inquiries within 7 business days.</p>
-            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7); font-style: italic; margin-top: 1rem;">
-                <strong>By using LegalPocket, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</strong>
-            </p>
+            <h4>Response Time</h4>
+            <p>We strive to acknowledge all inquiries within seven (7) business days. Please note that high volumes of inquiries may result in a longer response time.</p>
+
+            <h4>No Legal Advice via Support</h4>
+            <p>Any communication with us via email or support channels is for administrative and technical purposes only. Contacting us does not create a solicitor-client relationship, and our support team cannot provide legal advice or immigration consulting.</p>
         </div>
     </div>
 </main>
